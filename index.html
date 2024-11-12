@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="RoboAnnotateX">
+  <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+      /* 使用CSS来控制视频的宽度 */
+      video {
+          width: 100%;
+          height: auto; /* 让高度自适应，保持视频比例 */
+      }
+      select {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        appearance: none;
+        background-color: #f8f8f8;
+        cursor: pointer;
+      }
+
+      select:hover {
+        background-color: #e0e0e0;
+      }
+
+      select:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+  </style>
+
+  <title>RoboAnnotateX
+</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<!--<body>-->
+
+  <body>
+
+  <section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">RoboAnnotateX
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://kisa-for-robotics.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code(Coming Soon)</span>
+                  </a>
+              </span>
+
+</h1>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Robotic manipulation tasks 
+          </p>
+        </div>
+      </div>
+    </div>
+
+         <!--/ Motivation Example. -->
+    <hr style="border-top: 5px dotted #b8b8b8;">
+    <!-- Method. -->
+    <!-- <div class="columns">
+      <div class="column is-10 is-offset-1">  -->
+    <h2 class="title is-3">Motivation Example</h2>
+    <!-- <div style="display: flex; margin: auto; justify-content: center; width: 100%">
+      <img style="width: 70%" src="./static/images/kisa_overview2_00.png"/>
+    </div>
+    <div class="content has-text-justified" style="margin-top: 20px;">
+      <p class="caption"><br />
+        <strong>Overview of Keyframe Identification.</strong>  
+        Both goal image similarity（LIV-I） and skill language similarity（LIV-L） struggle to stand out at keyframes. 
+        KISA can exhibit conspicuous peaks near groundtruth boundaries for accurate keyframe identification.  
+      </p>
+    </div>
+    <div style="display: flex; margin: auto; justify-content: center; width: 100%">
+      <img style="width: 70%" src="./static/images/motivation_00.png"/>
+    </div>
+    <div class="content has-text-justified" style="margin-top: 20px;">
+      <p class="caption"><br />
+        <strong>Motivation Example.</strong> 
+        Without historical context for semantic action cognition, two visually similar frames from different skills can confuse the alignment. Furthermore, the 
+        representation might overfit the alignment between isolated frames and skills, leading to over-identification or false-identification.
+      </p>
+    </div> -->
+    <!--/ Abstract. -->
+    <hr style="border-top: 5px dotted #b8b8b8;">
+    <!-- Method. -->
+    <!-- <div class="columns">
+      <div class="column is-10 is-offset-1">  -->
+    <h2 class="title is-3">Method</h2>
+    <!-- <div style="display: flex; margin: auto; justify-content: center; width: 100%">
+      <img style="width: 100%" src="./static/images/framework_v3_00.png"/>
+    </div>
+    <div class="content has-text-justified" style="margin-top: 20px;">
+      <p class="caption"><br />
+        <strong>Overview framework of KISA.</strong>  
+        KISA first leverages a simple yet effective temporal enhancement module upon the pre-trained vision-language representation to 
+        obtain the video-level representation for each frame. During training, the alignment involves two branches: <b>Inter-skill</b>: we 
+        design coarse history-aware contrastive learning via constructing hard negative samples with mismatched historical contexts and incorrect skills. 
+        <b>Intra-skill</b> we additionally fine-grained monotonic alignment to encourage the capture of skill-aware progress within the sub-task, and prevent representation collapse to highly similarity within the same skill.
+    </div> -->
+
+      <!-- </div>
+    </div> -->
+    <!--/ Method. -->
+    <hr style="border-top: 5px dotted #b8b8b8;">
+
+    <h2 class="title is-3">Qualitative Results</h2>
+
+
+    <hr style="border-top: 5px dotted #b8b8b8;">
+
+    <h2 class="title is-3">Quantitative Results</h2>
+
+    <!--/ Hopper. -->
+  
+    <hr style="border-top: 5px dotted #b8b8b8;">
+    
+    <h2 class="title is-3">Typical Cases</h2>
+
+    <!-- <h3 class="title is-4">Success Case</h3>
+    <div>
+      <select onchange="changeVideo('success', this)">
+        <option value="videos/frankakitchen.mp4">FrankaKitchen0</option>
+        <option value="videos/calvin2.mp4">CALVIN2</option>
+        <option value="videos/cauliflower1.mp4">BrdigeData_Cauliflowers1</option>
+        <option value="videos/kitchen2.mp4">RealKitchen2</option>
+      </select>
+
+      <video id="successVideoPlayer" controls>
+        <source id="successVideoSource" src="" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div> -->
+
+    <!-- <h3 class="title is-4">Failure Case</h3>
+    <div>
+      <select onchange="changeVideo('failure', this)">
+        <option value="videos/calvin.mp4">CALVIN0</option>
+        <option value="videos/kitchen1.mp4">RealKitchen1</option>
+        <option value="videos/cauliflowers.mp4">BrdigeData_Cauliflowers0</option>
+        <option value="videos/blueberry.mp4">BrdigeData_Blueberry0</option>
+      </select>
+
+      <video id="failureVideoPlayer" controls>
+        <source id="failureVideoSource" src="" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div> -->
+
+    <script>
+      function changeVideo(type, selectElement) {
+        var videoPlayerId = type === 'success' ? 'successVideoPlayer' : 'failureVideoPlayer';
+        var videoSourceId = type === 'success' ? 'successVideoSource' : 'failureVideoSource';
+        
+        var videoPlayer = document.getElementById(videoPlayerId);
+        var videoSource = document.getElementById(videoSourceId);
+
+        // 获取所选视频的文件路径
+        var selectedVideo = selectElement.value;
+
+        // 更新视频的src属性
+        videoSource.src = selectedVideo;
+
+        // 重新加载视频
+        videoPlayer.load();
+
+        // 播放视频
+        videoPlayer.play();
+      }
+    </script>
+
+
+    <hr style="border-top: 5px dotted #b8b8b8;">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Conclusion</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this paper, we introduce KISA, a unified framework to achieve accurate keyframe identification and skills annotation for long-horizon manipulation demonstrations. 
+            We propose a simple yet effective temporal enhanced module that can flexibly equip any existing pre-trained representations with expanded receptive fields to capture long-range
+            semantic dynamics, bridging the gap between static frame-level representation and video-level understanding. We further design coarse contrastive learning and fine-grained
+            monotonic encouragement to enhance the alignment between keyframes and skills. The experiment results demonstrate that KISA achieves more accurate and interpretable
+            keyframe identification than competitive baselines and enjoys the robust zero-shot generalization ability. Furthermore, demonstrations with accurate keyframes and interpretable
+            skills annotated by KISA can significantly facilitate policy learning. We believe that KISA can serve as a reliable tool to accurately annotate robotics demonstrations at a low cost,
+            potentially facilitating the research in robotics community.
+          </p>
+        </div>
+      </div>
+    </div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://cotdiffusion.github.io/" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://cotdiffusion.github.io/">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    </main>
+  </body>
+</html>
