@@ -186,8 +186,19 @@
         models' visual understanding and reasoning capabilities across multiple dimensions.
       </p>
 
+      <!-- Training Details -->
+      <hr style="border-top: 5px dotted #b8b8b8;">
+      <h2 class="title is-3">Training Details</h2>
+      <img style="width: 100%" src="static/image/figure_train_details.png" />
+      <p class="caption"><br />
+        <strong>Module training configuration across different stages.</strong>
+        Detailed overview of module training states (Freeze/Open) during three
+        sequential stages: general pretraining, short-horizon fine-tuning, and long-horizon fine-tuning. The configuration shows which components
+        remain frozen and which are trainable across different training phases, with LoRA adaptation introduced in the fine-tuning stages
+      </p>
 
-      <!--/ Method. -->
+
+      <!--/ Qualitative Results. -->
       <hr style="border-top: 5px dotted #b8b8b8;">
       <h2 class="title is-3">Qualitative Results</h2>
       <img style="width: 100%" src="static/image/figure_result_table.png" />
@@ -208,14 +219,22 @@
       </p>
 
 
+      <!-- Qyantitative Results -->
       <hr style="border-top: 5px dotted #b8b8b8;">
-
       <h2 class="title is-3">Quantitative Results</h2>
+      <img style="width: 100%" src="static/image/figure_appendix_demo_1-v2_01.png" />
+
+      <img style="width: 100%" src="static/image/figure_appendix_demo_3-v2_01.png" />
+      <p class="caption"><br />
+        <strong>More visualization.</strong>
+        Comparative analysis of scene understanding and temporal reasoning capabilities across RoboAnnotatorX,
+        GPT-4o, and Qwen2-VL models. The comparison showcases how different models interpret and reason about visual inputs, temporal
+        relationships, and action sequences.
+      </p>
 
       <!--/ Hopper. -->
 
       <hr style="border-top: 5px dotted #b8b8b8;">
-
       <h2 class="title is-3">Typical Cases</h2>
 
       <!-- <h3 class="title is-4">Success Case</h3>
