@@ -35,7 +35,7 @@
     }
   </style>
 
-  <title>RoboAnnotateX
+  <title>RoboAnnotatorX
   </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -77,7 +77,8 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">RoboAnnotatorX: A Comprehensive and Universal Annotation Framework for Accurate Understanding of Long-horizon Robot Demonstration
+            <h1 class="title is-1 publication-title">RoboAnnotatorX: A Comprehensive and Universal Annotation Framework
+              for Accurate Understanding of Long-horizon Robot Demonstration
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <!-- PDF Link. -->
@@ -110,12 +111,13 @@
 
   <section class="section">
     <div class="container is-max-desktop">
+      <img style="width: 100%" src="static/image/figure_motivation-v4_01.png"/>
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            <p> 
+            <p>
               Recent advances in robotics have produced numerous valuable large-scale demonstration datasets, yet their
               potential remains underutilized due to annotation limitations. Current datasets often suffer from sparse
               temporal annotations, and inconsistent labeling granularity, particularly for complex long-horizon
@@ -259,19 +261,18 @@
           <h2 class="title is-3">Conclusion</h2>
           <div class="content has-text-justified">
             <p>
-              In this paper, we introduce KISA, a unified framework to achieve accurate keyframe identification and
-              skills annotation for long-horizon manipulation demonstrations.
-              We propose a simple yet effective temporal enhanced module that can flexibly equip any existing
-              pre-trained representations with expanded receptive fields to capture long-range
-              semantic dynamics, bridging the gap between static frame-level representation and video-level
-              understanding. We further design coarse contrastive learning and fine-grained
-              monotonic encouragement to enhance the alignment between keyframes and skills. The experiment results
-              demonstrate that KISA achieves more accurate and interpretable
-              keyframe identification than competitive baselines and enjoys the robust zero-shot generalization ability.
-              Furthermore, demonstrations with accurate keyframes and interpretable
-              skills annotated by KISA can significantly facilitate policy learning. We believe that KISA can serve as a
-              reliable tool to accurately annotate robotics demonstrations at a low cost,
-              potentially facilitating the research in robotics community.
+              In this work, we present RoboAnnotatorX, an advanced automated annotation framework that leverages MLLM to 
+              generate high-quality, context-rich annotations for complex long-horizon robotic demonstrations, where X signifies its 
+              comprehensive annotation capabilities and universal applicability across diverse datasets. Through our proposed 
+              multi-scale token-efficient encoder with its unique three-stream architecture, our model achieves superior annotation 
+              quality by balancing fine-grained visual understanding with efficient temporal reasoning. Moreover, to bridge the critical gap between general vision-language understanding and 
+              specialized robotics comprehension, we introduce RoboX-VQA, a extensive dataset comprising 1M QA pairs and 
+              500K robot episodes cross 20 embodiments and 600 skills, establishing the first comprehensive benchmark for long- 
+              horizon robot video understanding. With coverage spanning fine-grained scene understanding and temporal reasoning, 
+              combined with a curriculum-inspired training paradigm, RoboAnnotatorX demonstrates robust generalization across 
+              diverse robotic platforms and environments. We envision RoboAnnotatorX as a reliable annotation tool to unleash 
+              the full potential of robotic demonstrations, while RoboX-VQA can also provide convenient resources as both a large- 
+              scale dataset with fine-grained annotations and comprehen-sive benchmark to facilitate future robotics research.
             </p>
           </div>
         </div>
