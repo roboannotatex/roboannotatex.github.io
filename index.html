@@ -111,7 +111,7 @@
 
   <section class="section">
     <div class="container is-max-desktop">
-      <img style="width: 100%" src="static/image/figure_motivation-v4_01.png"/>
+      <img style="width: 100%" src="static/image/figure_motivation-v4_01.png" />
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -140,11 +140,11 @@
       </div>
 
       <!--/ Motivation Example. -->
-      <hr style="border-top: 5px dotted #b8b8b8;">
+      <!-- <hr style="border-top: 5px dotted #b8b8b8;"> -->
       <!-- Method. -->
       <!-- <div class="columns">
       <div class="column is-10 is-offset-1">  -->
-      <h2 class="title is-3">Motivation Example</h2>
+      <!-- <h2 class="title is-3">Motivation Example</h2> -->
       <!-- <div style="display: flex; margin: auto; justify-content: center; width: 100%">
       <img style="width: 70%" src="./static/images/kisa_overview2_00.png"/>
     </div>
@@ -165,26 +165,28 @@
         representation might overfit the alignment between isolated frames and skills, leading to over-identification or false-identification.
       </p>
     </div> -->
-      <!--/ Abstract. -->
       <hr style="border-top: 5px dotted #b8b8b8;">
-      <!-- Method. -->
-      <!-- <div class="columns">
-      <div class="column is-10 is-offset-1">  -->
       <h2 class="title is-3">Method</h2>
-      <!-- <div style="display: flex; margin: auto; justify-content: center; width: 100%">
-      <img style="width: 100%" src="./static/images/framework_v3_00.png"/>
-    </div>
-    <div class="content has-text-justified" style="margin-top: 20px;">
+      <img style="width: 100%" src="static/image/framework-v4_01.png" />
       <p class="caption"><br />
-        <strong>Overview framework of KISA.</strong>  
-        KISA first leverages a simple yet effective temporal enhancement module upon the pre-trained vision-language representation to 
-        obtain the video-level representation for each frame. During training, the alignment involves two branches: <b>Inter-skill</b>: we 
-        design coarse history-aware contrastive learning via constructing hard negative samples with mismatched historical contexts and incorrect skills. 
-        <b>Intra-skill</b> we additionally fine-grained monotonic alignment to encourage the capture of skill-aware progress within the sub-task, and prevent representation collapse to highly similarity within the same skill.
-    </div> -->
+        <strong>Overview framework of RoboAnnotatorX.</strong>
+        Specifically, we introduce a multi-scale token-efficient encoder that efficiently processes long-horizon videos
+        (with total length T) through scene-level anchoring (with K anchoring keyframes), clip-level temporal dynamics,
+        and video-level global modeling. Moreover, to bridge the domain gap between general vision-language understanding and robotics, we
+        construct a comprehensive instruction fine-tuning dataset RoboX-VQA across multi-granularity robotics annotation with hybrid demonstration collection
+        and automatic QA generation.
+      </p>
 
-      <!-- </div>
-    </div> -->
+      <img style="width: 100%" src="static/image/figure3_framework_datalabeling-v2_01.png" />
+      <p class="caption"><br />
+        <strong>Overview framework of automatic RoboX-VQA generation.</strong>
+        Our framework leverages dual-source meta-information to
+        generate comprehensive question-answer pairs. These meta-information sources are fed into GPT-4o, which, guided by carefully designed
+        prompts, generates diverse and semantically meaningful QA pairs. This automated process creates structured learning signals that enhance
+        models' visual understanding and reasoning capabilities across multiple dimensions.
+      </p>
+
+
       <!--/ Method. -->
       <hr style="border-top: 5px dotted #b8b8b8;">
 
@@ -261,18 +263,28 @@
           <h2 class="title is-3">Conclusion</h2>
           <div class="content has-text-justified">
             <p>
-              In this work, we present RoboAnnotatorX, an advanced automated annotation framework that leverages MLLM to 
-              generate high-quality, context-rich annotations for complex long-horizon robotic demonstrations, where X signifies its 
-              comprehensive annotation capabilities and universal applicability across diverse datasets. Through our proposed 
-              multi-scale token-efficient encoder with its unique three-stream architecture, our model achieves superior annotation 
-              quality by balancing fine-grained visual understanding with efficient temporal reasoning. Moreover, to bridge the critical gap between general vision-language understanding and 
-              specialized robotics comprehension, we introduce RoboX-VQA, a extensive dataset comprising 1M QA pairs and 
-              500K robot episodes cross 20 embodiments and 600 skills, establishing the first comprehensive benchmark for long- 
-              horizon robot video understanding. With coverage spanning fine-grained scene understanding and temporal reasoning, 
-              combined with a curriculum-inspired training paradigm, RoboAnnotatorX demonstrates robust generalization across 
-              diverse robotic platforms and environments. We envision RoboAnnotatorX as a reliable annotation tool to unleash 
-              the full potential of robotic demonstrations, while RoboX-VQA can also provide convenient resources as both a large- 
-              scale dataset with fine-grained annotations and comprehen-sive benchmark to facilitate future robotics research.
+              In this work, we present RoboAnnotatorX, an advanced automated annotation framework that leverages MLLM to
+              generate high-quality, context-rich annotations for complex long-horizon robotic demonstrations, where X
+              signifies its
+              comprehensive annotation capabilities and universal applicability across diverse datasets. Through our
+              proposed
+              multi-scale token-efficient encoder with its unique three-stream architecture, our model achieves superior
+              annotation
+              quality by balancing fine-grained visual understanding with efficient temporal reasoning. Moreover, to
+              bridge the critical gap between general vision-language understanding and
+              specialized robotics comprehension, we introduce RoboX-VQA, a extensive dataset comprising 1M QA pairs and
+              500K robot episodes cross 20 embodiments and 600 skills, establishing the first comprehensive benchmark
+              for long-
+              horizon robot video understanding. With coverage spanning fine-grained scene understanding and temporal
+              reasoning,
+              combined with a curriculum-inspired training paradigm, RoboAnnotatorX demonstrates robust generalization
+              across
+              diverse robotic platforms and environments. We envision RoboAnnotatorX as a reliable annotation tool to
+              unleash
+              the full potential of robotic demonstrations, while RoboX-VQA can also provide convenient resources as
+              both a large-
+              scale dataset with fine-grained annotations and comprehen-sive benchmark to facilitate future robotics
+              research.
             </p>
           </div>
         </div>
