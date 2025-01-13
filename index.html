@@ -189,8 +189,23 @@
 
       <!--/ Method. -->
       <hr style="border-top: 5px dotted #b8b8b8;">
-
       <h2 class="title is-3">Qualitative Results</h2>
+      <img style="width: 100%" src="static/image/figure_result_table.png" />
+      <p class="caption"><br />
+        <strong>Comprehensive evaluation results on the dataset.</strong>
+        We evaluate models on two aspects: scene understanding and temporal
+        understanding. For text-based annotations, we employ GPT-4o to assess accuracy (%) and score (0-5), following standard video understanding protocols. For temporal localization tasks, we report recall and IoU metrics. Notably, methods highlighted in grey integrate
+        general MLLMs with foundational models as a pipeline for robotics, in a training-free manner. Additionally, we select three representative
+        general MLLMs fine-tuned on RoboX-VQA, similar to RoboAnnotatorX for more detailed analysis
+      </p>
+
+      <img style="width: 100%" src="static/image/figure_result_token-v3_01.png" />
+      <p class="caption"><br />
+        <strong>Analysis of Token Efficiency and Effectiveness.</strong>
+        (1) Left: Performance comparison across different demonstration
+        lengths. (2) Right: Token efficiency analysis, illustrating accuracy
+        against token consumption (bubble size represents token count).
+      </p>
 
 
       <hr style="border-top: 5px dotted #b8b8b8;">
